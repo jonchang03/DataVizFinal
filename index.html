@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
     <link rel="stylesheet" href="reveal.js/css/theme/beige.css">
     <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
-    <link rel="stylesheet" href="reveal.js/css/custom-gc.css" />
+    <!-- <link rel="stylesheet" href="reveal.js/css/custom-gc.css" /> -->
 </head>
 
 <body>
@@ -25,31 +25,89 @@
 
 <!-- Title Slide -->
 <section>
-    <h1>Title Slide</h1>
-    <h3>About this visualization</h3>
+    <h1>The Crypto Craze</h1>
+    <h3>Jonathan Chang</h3>
+    <h4>CS498 Data Visualization</h4>
+
+</section>
+
+<!-- About this visualization -->
+<section>
+    <h2>About the visualization</h2>
+    <small>
+       <ol>
+           <li class="fragment" data-fragment-index="1"><strong>Interactive Slideshow</strong></li>
+           <p class="fragment" data-fragment-index="2">
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et viverra arcu, at sagittis mi. Praesent pretium viverra nulla id placerat. Proin lacinia fringilla pretium. Nunc eu sapien sit amet enim accumsan bibendum sit amet eu quam.
+           </p>
+
+           <li class="fragment" data-fragment-index="3"><strong>Scenes</strong></li>
+           <p class="fragment" data-fragment-index="4">
+             Description
+           </p>
+
+           <li class="fragment" data-fragment-index="5"><strong>Annotations</strong></li>
+           <p class="fragment" data-fragment-index="6">
+             Description
+           </p>
+
+           <li class="fragment" data-fragment-index="7"><strong>Parameters</strong></li>
+           <p class="fragment" data-fragment-index="8">
+             Description
+           </p>
+
+           <li class="fragment" data-fragment-index="9"><strong>Triggers</strong></li>
+           <p class="fragment" data-fragment-index="10">
+             Description
+           </p>
+       </ol>
+
+
+       </ol>
+   </small>
+</section>
+
+<!-- The Dataset -->
+<section>
+    <h1>The Dataset</h1>
+    <h3>Kaggle Link</h3>
     <p>Paragraph Description</p>
 </section>
 
 <!-- Chart 1 -->
 <section>
-    <h3>Top 25 Cryptos</h3>
+    <h3>Top 25 Cryptos (marketcap)</h3>
+    <div class="no-margin-top" style="position: absolute; top: 700px">
+        <p><small>Mouseover displays corresponding marketcap in tens of millions (as of June 6, 2018).</small></p>
+    </div>
     <div class="row no-margin-top">
         <div class="fig-container no-margin-top" data-file="d3-fig/bubble_crypto.html"></div>
-  </div>
+    </div>
 </section>
 
 <!-- Chart 2 -->
 <section>
-    <h3>Stock Chart</h3>
+    <h3>Crypto Price Graph</h3>
     <div class="row no-margin-top">
         <div class="fig-container no-margin-top" data-file="d3-fig/line_crypto.html"></div>
-  </div>
+    </div>
+    <div class="no-margin-top" style="position: absolute; top: 550px">
+        <p><small>Note: Wait a second for the d3 chart to load and click the crypto symbol to hide/show the corresponding line graph.</small></p>
+    </div>
+</section>
+
+<!-- Chart 2 -->
+<section>
+    <h2>Analysis</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et viverra arcu, at sagittis mi. Praesent pretium viverra nulla id placerat. Proin lacinia fringilla pretium. Nunc eu sapien sit amet enim accumsan bibendum sit amet eu quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer et mauris erat. In placerat tempus justo at egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas efficitur porta ante vitae rutrum. Nunc dictum est nec est commodo scelerisque. Donec maximus lacus risus, non blandit justo ullamcorper eget.
+    </p>
 </section>
 
 <!-- Conclusion Slide -->
 <section>
     <h1>The End</h1>
-    <h3>Thank you!</h3>
+    <h3>References</h3>
 </section>
 
 
@@ -62,7 +120,7 @@
 // Full list of configuration options available at:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-    controls: false,
+    controls: true,
     progress: true,
     history: true,
     center: false,
