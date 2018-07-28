@@ -38,7 +38,8 @@ var margin = {top: 30, right: 20, bottom: 70, left: 50},
     height = 380 - margin.top - margin.bottom;
 
 // Parse the date / time
-var parseDate = d3.timeParse("%b %Y");
+// var parseDate = d3.timeParse("%b %Y");
+var parseDate = d3.timeParse("%b %d %Y");
 
 // Set the ranges
 var x = d3.scaleTime().range([0, width]);
@@ -59,7 +60,7 @@ var svg = d3.select("body")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv("crypto.csv", function(error, data) {
+d3.csv("crypto2.csv", function(error, data) {
     data.forEach(function(d) {
 		d.date = parseDate(d.date);
 		d.price = +d.price;
@@ -130,6 +131,19 @@ d3.csv("crypto.csv", function(error, data) {
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
       .text("Price (USD)");
+
+
+  // Add Annotation 1
+  svg.append("text")
+     .attr("transform", "translate(" + (7.5 * width / 10) + " ," + (margin.top - height/14) + ")")
+     .style("text-anchor", "middle")
+     .text("BTC Peaks ~$20K in Dec 2017");
+
+  // Add Annotation 2
+  svg.append("text")
+     .attr("transform", "translate(" + (7 * width / 10) + " ," + (margin.bottom + height/1.75) + ")")
+     .style("text-anchor", "middle")
+     .text("BTC fork -> BCH in Aug 2017 ");
 
 });
 
